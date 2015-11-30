@@ -1,4 +1,4 @@
-aside img{ 
+article img{ 
 	height: 200px;
 	width: 300px;
 	float: left;
@@ -6,7 +6,7 @@ aside img{
 
 nav{
 	float:left;
-	width: 20%;
+	width: 30%;
 	background-color: #2392a5;
 	position: fixed;
     left: 0;
@@ -14,9 +14,9 @@ nav{
     bottom: 0;
 }
 
-aside{
+article{
 	float:right;
-	width: 80%;
+	width: 65%;
 	
 }
 
@@ -41,4 +41,6 @@ nav a:hover{
 nav a:select{
 	color:white;
 }
+
+
 
