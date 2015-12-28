@@ -6,135 +6,34 @@
 	<body>
 		<h1> Arrays & Hashes </h1>
 		
-<p>If we want to start with a blank object that we can then augment with methods and properties, we can just create an instance of the Object class.
-o = Object.new
-def o.my_method
-  1 + 1
+<p>
+  Local Variables: Local variables are the variables that are defined in a method. Local variables are not available outside the method. You will see more details about method in subsequent chapter. Local variables begin with a lowercase letter or _.
+
+Instance Variables: Instance variables are available across methods for any particular instance or object. That means that instance variables change from object to object. Instance variables are preceded by the at sign (@) followed by the variable name.
+
+Class Variables: Class variables are available across different objects. A class variable belongs to the class and is a characteristic of a class. They are preceded by the sign @@ and are followed by the variable name.
+
+Global Variables: Class variables are not available across classes. If you want to have a single variable, which is available across classes, you need to define a global variable. The global variables are always preceded by the dollar sign ($).</p>
+
+<h1>Creating new Objects</h1>
+
+<p>variable = Name.new</p>
+
+<h1>Create Initialize Method</h1>
+<p>
+class Name
+   @@no_of_customers=0
+   def initialize(id, name, addr)
+      @cust_id=id
+      @cust_name=name
+      @cust_addr=addr
+   end
 end
-o.my_method # => 2
-What about properties? Well, Ruby has instance variables (variables that each instance of an object gets); an instance variable starts with an ‘at’ sign (@). You can get and set these instance variables by creating functions especially for that purpose.
-
-def o.set_name ( name )
-  @name = name
-end
- 
-def o.get_name
-  @name
-end
- 
-o.set_name "Andrew"
-o.get_name # => Andrew
-You should note that the variable @name doesn’t need to be initialized anywhere. Ruby takes care of keeping that organized for you. Now, we can set and get the instance variables @name. However, isn’t it rather ugly to use set_name and get_name for properties? Doing something like o.name = "Andrew" to write and o.name to read would be so much more natural. We’ll see how to do this in a minute; but for now, let’s start creating a class of our own.
-
-Creating a Class
-
-It’s pretty simple to create a class. Just use the following syntax. In this lesson, we’ll be creating a pretty useless Person class:
-
-
-class Person
- 
-end
-Again, super-simple. Let’s start filling it in.
-
-Creating Properties
-
-We’ve seen how to create properties: they’re just method wrappers for instance variables. However, we want them to act more like the way you would expect properties to act. It’s easy for the get method:
-
-
-def name
-  @name
-end
-Since we’re inside the class, we don’t have to give the name of an object in the method signature; just the name of the method will do. When we create an instance of the Person class—say, p1—we’ll be able to call this in the usual way—p1.name.
-
-But how can we improve the look of setting the @name variable?
-
-Ruby gives us an incredible bit of sugar to make this really cool. Check this out:
-
-def name= name
-  @name = name
-end
-Okay, so what? This way, we’re writing p1.name=("joe") or at least p1.name="joe", because parenthesis aren’t required. Is that much better? Well, here’s the cool part: you can put in the spaces and Ruby won’t skip a beat:
-
-
-p1.name = "joe"
-Now, we can write and read our instance variables the way you would expect properties to be read.
-
-But it gets even better. Setting properties via methods like this gives you the opportunity to do something with the value that the user of your class passes in—something more than just assign it to an instance variable, if that's appropriate for your class. However, there’s a good chance that most of the time you’ll do just as we have here: simply set or get the instance variables. In that case, Ruby makes it even easier. Just add this at the top of your class:
-
-
-attr_accessor :name, :age, :your_properties_here
-Pass attr_accessor the names of your properties as symbols. This creates the var and var= methods for you. Then, you’ll be able to use the @ versions wherever you need to in your code.
-
-If you want read-only or write-only properties, you can use attr_reader or attr_writer, respectively. Of course, if you use, say, attr_writer, you can then create a custom reader method if needed.
-
-Creating Instance Method
-
-We’ve seen how to create instance methods; don’t forget you can use those property values if you need to:
-
-
-def greet
-  "#{@name} says, 'Hello there!'"
-end
-Creating a Constructor
-
-Often, you’ll want to perform some set-up code when an instance of a class is created. This is done in a constructor function. In Ruby, the constructor function is named initialize. Pop this near the top of our Person class:
-
-def initialize (name, age, job = 'unemployed')
-  @name = name
-  @age = age
-  @job = job
-end
-As you can see, initialize takes three parameters. The third one, job, is optional, because we’ve given it a default value. Of course, this works for any function, not just a constructor function. Now, when we want to create an instance of person, we have to do the following:
-
-joe  = Person.new("Joe", 35, "plumber")
-jill = Person.new "Jill", 14
-Creating Private Methods
-
-Private methods are functions that can only be called by other functions within the class; they aren’t exposed to the outside world. The usual way to create private methods is this: under all your public code (the instance and class methods), add the keyword private. Any functions that follow this keyword are private.
-
-
-  # instance and class methods above
-  private
- 
-  def get_real_weight
-    @weight
-  end
-end # of the class
-If you try to call this method on an instance of Person, it won’t work.
-
-Creating Class Methods and Variables
-
-Class methods and properties are functions and variables that aren’t accessible from instances of a class, but from the class itself. For example, let’s create a class method that returns the number of Person instances we have created.
-
-First, we have to create a class variable that will hold the number of Person instances we have created. Class variables are prefixed with two at-signs. So, add this to your class, preferably under the attr_* lines:
-
-@@count = 0
-Now, whenever we make a new Person, we want to increment this variable. What’s run every time we make a Person? initialize, of course; so update it accordingly. Now it looks like this:
-
-def initialize (name, age, job = 'unemployed')
-  @name = name
-  @age = age
-  @job = job
- 
-  @@count += 1
-end
-Then of course we have to create the class method:
-
-
-def self.count
-  @@count
-end
-Now, give this a try:
-
-
-joe  = Person.new("Joe", 35, "plumber")
-jill = Person.new("Jill", 13)
-bob  = Person.new "Bob", 70
- 
-Person.count # => 3
-Note - Ruby doesn't really have class methods (or static methods, as some languages call them). There's actually a pretty cool bit of "magic" going on under the surface that makes these look like class methods. We'll get into that—usually called metaprogramming—in a future chapter.
-
 </p>
+
+<h1> Calling a Class Method </h1>
+<p>object = Name.new
+  object.hello</p>
 
 </body>
 </html>
