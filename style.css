@@ -701,6 +701,9 @@ form button:hover{
 @media only screen and (max-width:460px){
 	td{width:90%;text-align:left!important;}
 	input,textarea{width:90%}
+	#process{
+		width:90%
+	}
 
 	#image_about_me{
 		display: none;}
