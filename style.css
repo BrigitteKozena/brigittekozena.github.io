@@ -7,9 +7,9 @@
 	width: 750px;
 }
 .exsmall_image{
-	width: 400px;
+	width: 400px;}
 }
-}
+
 
 /* colors */
 body,#btnLeft,#btnRight,#btnDesigner,#project #header{
@@ -670,6 +670,8 @@ form button:hover{
 		margin-right:0;
 		right:-20px;
 	}
+	#image_about_me{
+		display: none;}
 	#btnDesigner{right:-90px;top:33px}
 	#about>div:first-child{
 		margin-bottom:-150px;
@@ -699,6 +701,15 @@ form button:hover{
 @media only screen and (max-width:460px){
 	td{width:90%;text-align:left!important;}
 	input,textarea{width:90%}
+
+	#image_about_me{
+		display: none;}
+	#project h1{
+		font-size: 15px;
+	}
+	#project h2{
+		font-size: 15px;
+	}
 }
 
 @media only screen and (max-width:420px){
