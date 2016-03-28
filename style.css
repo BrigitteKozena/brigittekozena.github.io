@@ -534,7 +534,7 @@ body>span{
 		-webkit-transform:scale(0.9);
 		transform:scale(0.9);
 	}
-	#about>div{width:50%}
+	/*#about>div{width:50%}*/
 	#resume a{
 		-webkit-transform:scale(0.7);
 		transform:scale(0.7);
@@ -604,7 +604,7 @@ body>span{
 	}
 	
 	#page{padding-top:50px}
-	#about{padding:0 50px}
+	/*#about{padding:0 50px}*/
 	#process{margin:20px 0}
 	#process a{
 		margin:0;
@@ -662,10 +662,10 @@ body>span{
 
 	
 	/*#about{padding:0 30px}*/
-	#about>div:first-child{
+	/*#about>div:first-child{
 		-webkit-transform:scale(0.8);
 		transform:scale(0.8);
-	}
+	}*/
 
 	#portfolio>div{width:50%}
 	#project p{font-size:15px}
@@ -708,10 +708,10 @@ body>span{
 	}
 	#face{width:100%}
 
-	#about>div:first-child{
+	/*#about>div:first-child{
 		-webkit-transform:translate(0,-60px) scale(0.6);
 		transform:translate(0,-60px) scale(0.6);
-	}
+	}*/
 	#process a{
 		margin:-40px;
 		-webkit-transform:scale(0.5);
@@ -763,15 +763,15 @@ body>span{
     #aboutCoder p{margin:20px 0 0 20px}
 	#aboutDesigner p{margin:20px 20px 0 0}
 	
-	#about>div:first-child{
+	/*#about>div:first-child{
 		margin-bottom:-150px;
 		margin-top:-60px;
-	}
-	#about>div{
+	}*/
+	/*#about>div{
 		font-size:15px;
 		float:none;
 		width:100%;
-	}
+	}*/
 	#process{
 	 margin-bottom:-60px;
 	}
