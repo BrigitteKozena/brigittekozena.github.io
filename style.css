@@ -810,12 +810,12 @@ body>span{
 		transform:scale(0.25);
 	}
 
-	/*#project h1{
+	#project h1{
 		font-size: 15px;
 	}
 	#project h2{
 		font-size: 15px;
-	}*/
+	}
 }
 
 @media only screen and (max-width:420px){
