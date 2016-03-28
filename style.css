@@ -168,7 +168,7 @@ h2{
 	position:absolute;
 	top:0; left:50%;
 	text-align:left;
-	width:40%; height:100%;
+	width:50%; height:100%;
 		-webkit-transition:margin 1s ease-in;
 	transition:margin 1s ease-in;
 	margin-left:50%;
