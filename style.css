@@ -200,12 +200,12 @@ h2{
 	font-weight:100;
 	overflow:auto;
 	position:absolute;
-	top:0; left:10%;
+	top:0; left:0%;
 	text-align:right;
-	width:40%; height:100%;
+	width:50%; height:100%;
 		-webkit-transition:margin 1s ease-in;
 	transition:margin 1s ease-in;
-	margin-left:-50%;
+	margin-left:-60%;
 }
 .designer #aboutDesigner{margin:0}
 .designer #btnDesigner{}
@@ -556,7 +556,7 @@ body>span{
 
 @media only screen and (max-width:1450px){
 	#portfolio>div>div{font-size:12px}
-	#aboutTCoder,#aboutTDesigner{font-size:36px}
+	/*#aboutTCoder,#aboutTDesigner{font-size:36px}*/
 }
 
 @media only screen and (max-width:1300px){
@@ -661,11 +661,11 @@ body>span{
 	}
 
 	
-	#about{padding:0 30px}
-	#about>div:first-child{
+	/*#about{padding:0 30px}*/
+	/*#about>div:first-child{
 		-webkit-transform:scale(0.8);
 		transform:scale(0.8);
-	}
+	}*/
 
 	#portfolio>div{width:50%}
 	#project p{font-size:15px}
@@ -708,10 +708,10 @@ body>span{
 	}
 	#face{width:100%}
 
-	#about>div:first-child{
+	/*#about>div:first-child{
 		-webkit-transform:translate(0,-60px) scale(0.6);
 		transform:translate(0,-60px) scale(0.6);
-	}
+	}*/
 	#process a{
 		margin:-40px;
 		-webkit-transform:scale(0.5);
@@ -763,15 +763,15 @@ body>span{
     #aboutCoder p{margin:20px 0 0 20px}
 	#aboutDesigner p{margin:20px 20px 0 0}
 	
-	#about>div:first-child{
+	/*#about>div:first-child{
 		margin-bottom:-150px;
 		margin-top:-60px;
-	}
-	#about>div{
+	}*/
+	/*#about>div{
 		font-size:15px;
 		float:none;
 		width:100%;
-	}
+	}*/
 	#process{
 	 margin-bottom:-60px;
 	}

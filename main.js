@@ -42,11 +42,15 @@ window.onload=function(){
 btnCoder.onmousedown=
 btnLeft.onmousedown=function(){
 	banner.className="coder";
+	$('#btnLeft').hide();
+	$('#btnRight').show();
 }
 
 btnDesigner.onmousedown=
 btnRight.onmousedown=function(){
 	banner.className="designer";
+	$('#btnRight').hide();
+	$('#btnLeft').show();
 }
 
 function validate(f){
