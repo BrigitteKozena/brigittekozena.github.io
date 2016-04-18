@@ -1,12 +1,12 @@
 init();
 
 function init(){
-	if (!localStorage.ok) {
-		document.body.className="login";
-		var s=document.createElement("span");
-		s.innerHTML="<img src='img/about.png' alt=''/><h2>Brigitte&nbsp;Kozena</h2><p>Please enter the password to view my website:</p><input type='password' id='password'/><br/><br/><button onclick='login()'>Login</button>";
-		document.body.appendChild(s);
-	}
+	// if (!localStorage.ok) {
+	// 	document.body.className="login";
+	// 	var s=document.createElement("span");
+	// 	s.innerHTML="<img src='img/about.png' alt=''/><h2>Brigitte&nbsp;Kozena</h2><p>Please enter the password to view my website:</p><input type='password' id='password'/><br/><br/><button onclick='login()'>Login</button>";
+	// 	document.body.appendChild(s);
+	// }
 	var	A=portfolio.getElementsByTagName("div"),
 		h=Math.floor(A[0].offsetWidth*348/480);
 	
@@ -85,20 +85,20 @@ function validEmail(email) {
 	return re.test(email);
 }
 
-function login(){
-	if (password.value=='portfolio'){
-		localStorage.ok=1;
-		document.body.removeAttribute("class");
-		banner.removeAttribute("style");
-		page.removeAttribute("style");
-		var	A=portfolio.getElementsByTagName("div"),
-			h=Math.floor(A[0].offsetWidth*348/480);
+// function login(){
+// 	if (password.value=='portfolio'){
+// 		localStorage.ok=1;
+// 		document.body.removeAttribute("class");
+// 		banner.removeAttribute("style");
+// 		page.removeAttribute("style");
+// 		var	A=portfolio.getElementsByTagName("div"),
+// 			h=Math.floor(A[0].offsetWidth*348/480);
 	
-		for (var i=0;i<A.length;i++) if (A[i].parentNode==portfolio) A[i].setAttribute("style","height:"+h+"px");
-		setTimeout(function(){
-			banner.setAttribute("style","height:"+face.height+"px;top:"+header.offsetHeight+"px");
-			page.setAttribute("style","margin-top:"+(face.height+50)+"px");
-		},50);
-	}
-}
+// 		for (var i=0;i<A.length;i++) if (A[i].parentNode==portfolio) A[i].setAttribute("style","height:"+h+"px");
+// 		setTimeout(function(){
+// 			banner.setAttribute("style","height:"+face.height+"px;top:"+header.offsetHeight+"px");
+// 			page.setAttribute("style","margin-top:"+(face.height+50)+"px");
+// 		},50);
+// 	}
+// }
 
