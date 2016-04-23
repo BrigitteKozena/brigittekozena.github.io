@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-	<title>Bodysuit</title>  
+	<title>First+Aid</title>  
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<link href="style.css" rel="stylesheet" type="text/css" />
-	<style>h1,h2{background:#3b5997}</style>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	<style>#footer{background:#97babb}</style>
 </head>
 <body id="project">
@@ -14,22 +14,34 @@
 	<ul id="menu"><li><a href="index.html">home</a></li><li><a href="index.html#banner">about me</a></li><li><a href="index.html#portfolio">portfolio</a></li><li><a href="index.html#resume">resume</a></li><li><a href="index.html#contact">contact</a></li></ul>
 	<img id="mnu" src="img/menu.png" alt=""/>
 </div>
-<div id="BannerDiv">
-	<img id="Banner" src="img/projects/firstaid/banner.jpg" alt=""/>
-</div>
+
 <section>
-	<h1>Project: <span>First Aid</span><br/></h1>
-	<p>First Aid notifies users when a disaster occurs and facilitates the ability to send donations to nearby local charities. When starting this project we were aware that users are constantly being overflooded with data. We wanted to ensure that these disasters were not overlooked and thus, presented the data visually using D3. We used websockets to plot the disasters in realtime and the google maps API in order to locate nearby charities. We used Twillio and Redis to notify the user by text and email when a disaster hits. We also implemented the ability to sign up through facebook and share the donations you have made.  The overall platform was built using Rails, Ruby and Javascript.</p>
-	<p class="nav"><a href="maya.html">previous</a>|<a href="foundit.html">next</a></p>
-	<h2>Interactive Data with D3</h2>
-	<p class="center"><img class='small_image' src="img/projects/firstaid/1.jpg" alt=""/></p>
-	<p class="center"><img class='small_image' src="img/projects/firstaid/2.jpg" alt=""/></p>
-	<h2>Mobile Friendly</h2>
-	<p class="center"><img class='small_image' src="img/projects/firstaid/3.jpg" alt=""/></p>
-	<h2>Twillio for Text Notifications</h2>
-	<p class="center"><img src="img/projects/firstaid/4.jpg" alt=""/></p>
-	<h2>Redis for Emails</h2>
-	<p class="center"><img class='small_image' src="img/projects/firstaid/5.png" alt=""/></p>
+	<div class="w3-content" style="max-width:800px">
+
+	  <img class="mySlides" src="img/projects/firstaid/1.jpg" style="width:100%">
+	  <img class="mySlides" src="img/projects/firstaid/2.jpg" style="width:100%">
+	  <img class="mySlides" src="img/projects/firstaid/3.jpg" style="width:100%">
+	  <img class="mySlides addPadding" src="img/projects/firstaid/4.jpg" style="width:50%">
+	  <img class="mySlides" src="img/projects/firstaid/5.png" style="width:100%">
+
+	</div>
+
+	<div class="w3-center">
+	  <div class="w3-section">
+	    <button class="w3-btn" onclick="plusDivs(-1)">❮ Prev</button>
+	    <button class="w3-btn" onclick="plusDivs(1)">Next ❯</button>
+	  </div>
+	  <button class="w3-btn demo" onclick="currentDiv(1)">1</button> 
+	  <button class="w3-btn demo" onclick="currentDiv(2)">2</button> 
+	  <button class="w3-btn demo" onclick="currentDiv(3)">3</button> 
+	   <button class="w3-btn demo" onclick="currentDiv(4)">4</button> 
+	  <button class="w3-btn demo" onclick="currentDiv(5)">5</button> 
+
+	</div>
+	<h2>Firs+Aid</h2><br>
+	<h2>Role: Full Stack Developer</h2><br>
+	<h4>Skills: Ruby, Javascript, Rails, PostgreSQL, jQuery/AJAX, Redis, Stripe, Devise, Twillio, D3, Google Maps API</span></h4>
+		<p>First Aid notifies users when a disaster occurs and facilitates the ability to send donations to nearby local charities. When starting this project we were aware that users are constantly being overflooded with data. We wanted to ensure that these disasters were not overlooked and thus, presented the data visually using D3. We used websockets to plot the disasters in realtime and the google maps API in order to locate nearby charities. We used Twillio and Redis to notify the user by text and email when a disaster hits. We also implemented the ability to sign up through facebook and share the donations you have made.  The overall platform was built using Rails, Ruby and Javascript.</p>
 
 </section>
 
@@ -38,5 +50,33 @@
 </div>
 
 <script src="project.js" ></script>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+// 
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-grey", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-grey";
+}
+</script>
 </body>
 </html>

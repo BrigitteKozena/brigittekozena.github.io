@@ -37,6 +37,8 @@ window.onload=function(){
 	btnDesigner.setAttribute("style","margin:0");
 	btnLeft.setAttribute("style","opacity:1");
 	btnRight.setAttribute("style","opacity:1");
+
+	
 }
 
 btnCoder.onmousedown=
@@ -84,6 +86,8 @@ function validEmail(email) {
 	var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
 	return re.test(email);
 }
+
+
 
 // function login(){
 // 	if (password.value=='portfolio'){
