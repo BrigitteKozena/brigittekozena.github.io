@@ -5,7 +5,7 @@
 	<title>Blankenship Dry Goods</title>  
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<link href="style.css" rel="stylesheet" type="text/css" />
-	<style>h1,h2{background:#bd3c37}</style>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	<style>#footer{background:#97babb}</style>
 </head>
 <body id="project">
@@ -14,18 +14,36 @@
 	<ul id="menu"><li><a href="index.html">home</a></li><li><a href="index.html#banner">about me</a></li><li><a href="index.html#portfolio">portfolio</a></li><li><a href="index.html#resume">resume</a></li><li><a href="index.html#contact">contact</a></li></ul>
 	<img id="mnu" src="img/menu.png" alt=""/>
 </div>
-<div id="BannerDiv">
+<!-- <div id="BannerDiv">
 	<img id="Banner" src="img/projects/blankenshipdrygoods/banner.jpg" alt=""/>
-</div>
+</div> -->
 <section>
-	<h1>Company: <span>Blankenship Dry Goods</span><br/>Role: <span>Web&nbsp;developer</span></h1>
+	<div class="w3-content" style="max-width:800px">
+
+	  <img class="mySlides" src="img/projects/blankenshipdrygoods/image1.png" style="width:100%">
+	  <img class="mySlides" src="img/projects/blankenshipdrygoods/image2.png" style="width:100%">
+
+	</div>
+
+	<div class="w3-center">
+	  <div class="w3-section">
+	    <button class="w3-btn" onclick="plusDivs(-1)">❮ Prev</button>
+	    <button class="w3-btn" onclick="plusDivs(1)">Next ❯</button>
+	  </div>
+	  <button class="w3-btn demo" onclick="currentDiv(1)">1</button> 
+	  <button class="w3-btn demo" onclick="currentDiv(2)">2</button> 
+
+	</div>
+
+	<h2>Blankenship Dry Goods</h2><br>
+	<h2>Role: Web Developer</h2><br>
+	<h4>Skills: Photoshop, Balsamiq, Photography, HTML, CSS, Javascript</span></h4>
+
 	<p>Blankenship Dry Goods is an online fashion clothing company. As a web developer, my duties were to be part of a team that developed their e-Commerce website.  However, depending on what stage of development the site was at my duties varied. When images of the company’s products were needed, my position was shifted from a Web developer to a photographer. </p>
+<!-- 	<h2>Blankenship Dry Goods E-Commerce Site</h2>
+	<p class="center"><img src="img/projects/blankenshipdrygoods/image1.png" alt=""/></p> -->
 
-	<p class="nav"><a href="justsolutions.html">previous</a>|<a href="maya.html">next</a></p>
-	<h2>Blankenship Dry Goods E-Commerce Site</h2>
-	<p class="center"><img src="img/projects/blankenshipdrygoods/image1.png" alt=""/></p>
-
-	<h2>Essential Job Duties:</h2>
+	<h4>Essential Job Duties:</h4>
 	<p>
 		<ul>-	Development of the company’s e-Commerce website.</ul>
 		<ul>-	Development of wireframes and e-Commerce site prototypes. </ul>
@@ -34,8 +52,8 @@
 	
  	</p>
 	
-	<h2>Photography</h2>
-	<p class="center"><img src="img/projects/blankenshipdrygoods/image2.png" alt=""/></p>
+<!-- 	<h2>Photography</h2>
+	<p class="center"><img src="img/projects/blankenshipdrygoods/image2.png" alt=""/></p> -->
 	
 
 </section>
@@ -45,5 +63,33 @@
 </div>
 
 <script src="project.js" ></script>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+// 
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-grey", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-grey";
+}
+</script>
 </body>
 </html>

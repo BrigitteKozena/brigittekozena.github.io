@@ -5,7 +5,7 @@
 	<title>Maya</title>  
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<link href="style.css" rel="stylesheet" type="text/css" />
-	<style>h1,h2{background:#04adf4}</style>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	<style>#footer{background:#97babb}</style>
 </head>
 <body id="project">
@@ -14,20 +14,37 @@
 	<ul id="menu"><li><a href="index.html">home</a></li><li><a href="index.html#banner">about me</a></li><li><a href="index.html#portfolio">portfolio</a></li><li><a href="index.html#resume">resume</a></li><li><a href="index.html#contact">contact</a></li></ul>
 	<img id="mnu" src="img/menu.png" alt=""/>
 </div>
-<div id="BannerDiv">
+<!-- <div id="BannerDiv">
 	<img id="Banner" src="img/projects/maya/banner.jpg" alt=""/>
-</div>
+</div> -->
 <section>
-	<h1>Project: <span>Pop Art </span><br/>
-		Role: <span>CAD&nbsp;Designer</span></h1>
-			<p class="nav"><a href="crabazon.html">previous</a>|<a href="ai.html">next</a></p>
+	<div class="w3-content" style="max-width:800px">
+
+	  <img class="mySlides addPadding" src="img/projects/maya/image1.jpg" style="width:50%">
+	  <img class="mySlides" src="img/projects/maya/image2.jpg" style="width:100%">
+
+	</div>
+
+	<div class="w3-center">
+	  <div class="w3-section">
+	    <button class="w3-btn" onclick="plusDivs(-1)">❮ Prev</button>
+	    <button class="w3-btn" onclick="plusDivs(1)">Next ❯</button>
+	  </div>
+	  <button class="w3-btn demo" onclick="currentDiv(1)">1</button> 
+	  <button class="w3-btn demo" onclick="currentDiv(2)">2</button> 
+
+	</div>
+	<h2>3D Pop Art</h2><br>
+	<h2>Role: CAD Designer</h2><br>
+	<h4>Skills: Maya Autodesk</span></h4>
+
 	<p>During the rise of the pre renaissance period we begin to see a fascination for perspective. Artists began attempting to take the 3D world we exist in and lay it out in 2D without losing the concept of space. If we look at artists such as Duccio we can see that there is a struggle to transfer this information, onto a piece of paper. However, over time these images became less flat. They have attained a sense of perspective. What I mean by this is that they gave the right impression of height, width, depth, and position in relation to the other objects on the page when viewed from a particular point. </p>
  <p>If we look at Panofsky, "Perspective as Symbolic Form” we learn that he associates perspective towards the creation of physical space based on the plan of the empirical visual space.  The aspect usually mathematizes the visual space while ordering a visual phenomenon that reveals the nature of the things seen. It enables the viewer to see within and beyond the visual. So what if we reverse this? What if we take an image and add numerical values that allow it to exist in space. Would we have the same struggle as Duccio, or would it be easier? </p>
 <p>With the use of CAD I have attempted to recreate a 2D image into a 3D model. I used a coca cola advertisement as my image of replication. I had to consider the relationship of the bottle, words and dots in the background. What I have learnt through this project is the difficulty in understanding depth. Are the objects extremely large at a very far distance or are the small very close? In the end I understood that the answer was objective although guided by common sense.  </p>
-<p class="center"><img src="img/projects/maya/image1.jpg" alt=""/></p>
+<!-- <p class="center"><img src="img/projects/maya/image1.jpg" alt=""/></p> -->
 <p>In addition to looking at depth, I had to consider how to maintain the 2D aspect due to the very flat theme of pop art. This project challenged me to combine two contrasting concepts into one object: Creating Space and Flattening Space.  I concluded that the way to do this was through colouring and more importantly adding black lines. In my current version you will notice that I am lacking black outer edges (vectors) around each object. This is imperative when it comes to flattening the image. I have chosen to leave these out, as I need the lines to move when we move. For example, when you walk around the bottle the outer edge will always be changing therefore, I cannot just paint it on. I will need to program this concept in so that the black outer edge will rotate with the camera movement.</p>
  
-<p class="center"><img src="img/projects/maya/image2.jpg" alt=""/></p>
+<!-- <p class="center"><img src="img/projects/maya/image2.jpg" alt=""/></p> -->
 <p>Through recreating this image in CAD, it has lead me to think about McLuhan’s reading “ The Medium is the Message”. According to McLuhan, the medium affects the content delivered to the society through its characteristics. I have wondered whether the message was different now that we are able to move around the image. Has it been created for a different audience? Where would it be exhibited? </p>
 
 <p>Overall, this project has brought up questions about creating depth, flattening space and the affects of medium.  </p> 
@@ -35,7 +52,7 @@
 <p>For me, the challenge of flattening space was most exciting. Thus, making 2D exist in 3D is something I want to explore further. For my next project I want to use a 3D scan of my face and flatten it with the use of colour and lines. I hope that I will be able to share this with you in the future. </p>
 	
 
-	<p class="center"><img src="img/projects/maya/image3.jpg" alt=""/></p>
+	<!-- <p class="center"><img src="img/projects/maya/image3.jpg" alt=""/></p> -->
 	
 </section>
 
@@ -44,5 +61,33 @@
 </div>
 
 <script src="project.js" ></script>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+// 
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-grey", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-grey";
+}
+</script>
 </body>
 </html>

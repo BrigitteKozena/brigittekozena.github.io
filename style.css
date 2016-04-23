@@ -1,4 +1,5 @@
-.mySlides {display:none}
+.mySlides {display:none;
+			padding-top: 10px;}
 .addPadding{
 	margin-left: 25%;
 }
@@ -324,6 +325,9 @@ h2{
 	margin:30px 25px;
 }
 #portfolio p{
+	margin:10px 25px;
+}
+h5{
 	margin:10px 25px;
 }
 /*#portfolio p img{opacity:0.6}*/

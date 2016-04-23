@@ -5,7 +5,7 @@
 	<title>NYU Humanities</title>  
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<link href="style.css" rel="stylesheet" type="text/css" />
-	<style>h1,h2{background:#bd3c37}</style>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	<style>#footer{background:#97babb}</style>
 </head>
 <body id="project">
@@ -14,15 +14,34 @@
 	<ul id="menu"><li><a href="index.html">home</a></li><li><a href="index.html#banner">about me</a></li><li><a href="index.html#portfolio">portfolio</a></li><li><a href="index.html#resume">resume</a></li><li><a href="index.html#contact">contact</a></li></ul>
 	<img id="mnu" src="img/menu.png" alt=""/>
 </div>
-<div id="BannerDiv">
+<!-- <div id="BannerDiv">
 	<img id="Banner" src="img/projects/nyuhumanities/banner.jpg" alt=""/>
-</div>
+</div> -->
 <section>
-	<h1>Company: <span>New York University Humanities</span><br/>Role: <span>Web&nbsp;developer</span></h1>
+	<div class="w3-content" style="max-width:800px">
+
+	  <img class="mySlides" src="img/projects/nyuhumanities/image1.png" style="width:100%">
+	  <img class="mySlides" src="img/projects/nyuhumanities/image2.png" style="width:100%">
+
+	</div>
+
+	<div class="w3-center">
+	  <div class="w3-section">
+	    <button class="w3-btn" onclick="plusDivs(-1)">❮ Prev</button>
+	    <button class="w3-btn" onclick="plusDivs(1)">Next ❯</button>
+	  </div>
+	  <button class="w3-btn demo" onclick="currentDiv(1)">1</button> 
+	  <button class="w3-btn demo" onclick="currentDiv(2)">2</button> 
+
+	</div>
+	<h2>New York University Department of Humanities</h2><br>
+	<h2>Role: Web Developer</h2><br>
+	<h4>Skills: Javascript, JQuery, HTML, CSS</h4>
+
 	<p>While at University of New York, I correlated with different people including students and professors. I worked as the Department of Humanities website developer and also with enlightening students and professors on website development and maintenance. This position sole responsibility was dealing with all the aspects of the NYU humanities website. My collaboration with the Department of Humanities at New York University sharpened my interpersonal skills as well as technical skills. My proficiency in web development increased to greater standards that can be absorbed into any Information Technology related firm. 
-		<p class="nav"><a href="stickers.html">previous</a>|<a href="doodles.html">next</a></p>
-	<h2>Wireframes</h2>
-	<p class="center"><img class='small_image' src="img/projects/nyuhumanities/image1.png" alt=""/></p>
+	
+	<h4>Essential Job Duties:</h4>
+<!-- 	<p class="center"><img class='small_image' src="img/projects/nyuhumanities/image1.png" alt=""/></p> -->
 	
 	<ul>-	Development of websites for the Department of Humanities.</ul>
 	<ul>-	Organizing meetings with professors for development of simple websites that professors can create their profiles on. </ul>
@@ -31,9 +50,9 @@
 	<ul>-	Integrating developed websites with databases </ul>
   </p>
 	
-	<h2>NYU Humanities Website</h2>
+	<!-- <h2>NYU Humanities Website</h2>
 	<p class="center"><img class= 'small_image'src="img/projects/nyuhumanities/image2.png" alt=""/></p>
-	
+	 -->
 
 </section>
 
@@ -42,5 +61,33 @@
 </div>
 
 <script src="project.js" ></script>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+// 
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-grey", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-grey";
+}
+</script>
 </body>
 </html>

@@ -5,7 +5,7 @@
 	<title>Just Solutions</title>  
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<link href="style.css" rel="stylesheet" type="text/css" />
-	<style>h1,h2{background:#6c489f}</style>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	<style>#footer{background:#97babb}</style>
 </head>
 <body id="project">
@@ -14,15 +14,38 @@
 	<ul id="menu"><li><a href="index.html">home</a></li><li><a href="index.html#banner">about me</a></li><li><a href="index.html#portfolio">portfolio</a></li><li><a href="index.html#resume">resume</a></li><li><a href="index.html#contact">contact</a></li></ul>
 	<img id="mnu" src="img/menu.png" alt=""/>
 </div>
-<div id="BannerDiv">
+<!-- <div id="BannerDiv">
 	<img id="Banner" src="img/projects/justsolutions/banner.jpg" alt=""/>
-</div>
+</div> -->
 <section>
-	<h1>Company: <span>Just Solutions</span><br/>Role: <span>Web&nbsp;Developer & Graphics Designer</span></h1>
-	<p> Just Solutions is a start-up online store that deals with sale of products on Amazon. Just Solution’s products rank among the top five on Amazon. My job position at this firm mainly entailed with the aspects of web development and integration of e-Commerce plugins to support online purchase of products such as Groupon Codes. I worked with a team of editors and marketers to build a complete and all-round an e-Commerce website. However, I was also seen playing a huge role in other aspects of the compnay. For example, when launching new products I would take the position of the graphics designer as I was able to create illustrations in the Adobe Suite and 3D visuals in CAD.</p>
-	<p class="nav"><a href="l2t.html">previous</a>|<a href="blankenshipdrygoods.html">next</a></p>
+	<div class="w3-content" style="max-width:800px">
 
-	<h2>Essential Job Duties:</h2>
+	  <img class="mySlides" src="img/projects/justsolutions/image9.png" style="width:100%">
+	   <img class="mySlides" src="img/projects/justsolutions/image3.png" style="width:100%">
+	  <img class="mySlides" src="img/projects/justsolutions/image1.jpg" style="width:100%">
+	  <img class="mySlides" src="img/projects/justsolutions/image5.jpg" style="width:100%">
+	  <img class="mySlides" src="img/projects/justsolutions/image7.jpg" style="width:100%">
+
+	</div>
+
+	<div class="w3-center">
+	  <div class="w3-section">
+	    <button class="w3-btn" onclick="plusDivs(-1)">❮ Prev</button>
+	    <button class="w3-btn" onclick="plusDivs(1)">Next ❯</button>
+	  </div>
+	  <button class="w3-btn demo" onclick="currentDiv(1)">1</button> 
+	  <button class="w3-btn demo" onclick="currentDiv(2)">2</button> 
+	  <button class="w3-btn demo" onclick="currentDiv(3)">3</button> 
+	   <button class="w3-btn demo" onclick="currentDiv(4)">4</button> 
+	   <button class="w3-btn demo" onclick="currentDiv(5)">5</button> 
+
+	</div>
+	<h2>Just Solutions</h2><br>
+	<h2>Role: Web Developer & Graphics Designer</h2><br>
+	<h4>Skills: Photoshop, Illustrator, Photographym Javascript, HTML, CSS, </span></h4>
+	<p> Just Solutions is a start-up online store that deals with sale of products on Amazon. Just Solution’s products rank among the top five on Amazon. My job position at this firm mainly entailed with the aspects of web development and integration of e-Commerce plugins to support online purchase of products such as Groupon Codes. I worked with a team of editors and marketers to build a complete and all-round an e-Commerce website. However, I was also seen playing a huge role in other aspects of the compnay. For example, when launching new products I would take the position of the graphics designer as I was able to create illustrations in the Adobe Suite and 3D visuals in CAD.</p>
+
+	<h4>Essential Job Duties:</h4>
 	<p>
 		<ul>-	Building the company’s e-commerce website.</ul>
 		<ul>-	Creating mock ups in Computer-aided Design (CAD). </ul>
@@ -35,7 +58,7 @@
 	
  	</p>
 	
-	<h2>E-Commerce Website</h2>
+<!-- 	<h2>E-Commerce Website</h2>
 	<p class="center"><img src="img/projects/justsolutions/image9.png" alt=""/></p>
 
 	<h2>Built 3D Visuals in CAD</h2>
@@ -43,13 +66,13 @@
 
 	<h2>Built Visuals of Products in Illustrator</h2>
 	<p class="center"><img src="img/projects/justsolutions/image1.jpg" alt=""/></p>
-	<p class="center"><img src="img/projects/justsolutions/image5.jpg" alt=""/></p>
+	<p class="center"><img src="img/projects/justsolutions/image5.jpg" alt=""/></p> -->
 	
 	<!-- <p class="center"><img src="img/projects/justsolutions/image6.jpg" alt=""/></p> -->
 
-	<h2>Designed a Variety of Packaging Concepts</h2>
+<!-- 	<h2>Designed a Variety of Packaging Concepts</h2>
 	<p class="center"><img src="img/projects/justsolutions/image7.jpg" alt=""/></p>
-	<!-- <h2>Used Photoshop to Envision Products in Enviroments</h2>
+	<h2>Used Photoshop to Envision Products in Enviroments</h2>
 	<p class="center"><img src="img/projects/justsolutions/image8.png" alt=""/></p> -->
 
 </section>
@@ -59,5 +82,33 @@
 </div>
 
 <script src="project.js" ></script>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+// 
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-grey", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-grey";
+}
+</script>
 </body>
 </html>
