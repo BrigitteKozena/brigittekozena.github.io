@@ -6,12 +6,9 @@ window.onresize=function(){
 	if (_banner) BannerDiv.setAttribute("style","height:"+Banner.offsetHeight+"px");
 }
 
-Banner.onload=function(){
-	_banner=true;
-	BannerDiv.setAttribute("style","height:"+Banner.offsetHeight+"px")
-}
 
 mnu.onmousedown=function(){
 	if (menu.className=="on") menu.removeAttribute("class")
 	else menu.className="on";
 }
+
