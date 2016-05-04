@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Portfolios & Blogs</title>  
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<style>#footer{background:#2e3f50}</style>
+</head>
+<body id="project">
+<div id="header">
+	<img id="logo" src="img/logo.png" alt="Brigitte Kozena"/>
+	<ul id="menu"><li><a href="index.html">home</a></li><li><a href="index.html#banner">about me</a></li><li><a href="index.html#portfolio">portfolio</a></li><li><a href="index.html#resume">resume</a></li><li><a href="index.html#contact">contact</a></li></ul>
+	<img id="mnu" src="img/menu.png" alt=""/>
+</div>
+
+<section>
+
+	<!-- <div class="w3-content" style="max-width:800px"> -->
+
+	  <img class="mySlides" src="img/projects/portfolios/matt.jpg" style="width:100%">
+<!-- 	  <img class="mySlides addPadding" src="img/projects/foundit/mobile.jpg" style="width:50%">
+ -->
+
+<!-- 	</div>
+
+	<div class="w3-center">
+	  <div class="w3-section">
+	    <button class="w3-btn" onclick="plusDivs(-1)">❮ Prev</button>
+	    <button class="w3-btn" onclick="plusDivs(1)">Next ❯</button>
+	  </div>
+	  <button class="w3-btn demo" onclick="currentDiv(1)">1</button> 
+	  <button class="w3-btn demo" onclick="currentDiv(2)">2</button> 
+
+	</div> -->
+	
+		<h2>Client Portfolios and Blogs</h2><br>
+		<h2>Role: Full Stack Developer</h2><br>
+		<h4>Skills: Photoshop, Javascript, jQuery, HTML, CSS, Materialize/Bootstrap</span></h4>
+		<p>Experience designing and building clients websites and portfolios. </p>
+
+	
+</section>
+
+<div id="footer">
+	<a href="maya.html">previous</a>|<a href="bowling.html">next</a>
+</div>
+
+<script src="project.js" ></script>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-grey", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-grey";
+}
+</script>
+</body>
+</html>
